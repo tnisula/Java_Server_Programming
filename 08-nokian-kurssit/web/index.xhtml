@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Nokian Kurssit</title>
+    </h:head>
+    <h:body>
+        <h1>Nokian kurssit</h1>
+        
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputText value="Alkupäivä"/>
+                <h:inputText value="#{nokianKurssit.alkupäivä}"/>
+                <h:outputText value="Loppupäivä"/>
+                <h:inputText value="#{nokianKurssit.loppupäivä}"/>
+                <h:commandButton value="Hae"/>
+            </h:panelGrid>
+        </h:form>
+        
+        <h:dataTable var="r" value="#{nokianKurssit.kurssit}">
+            <h:column>#{r.päivä}</h:column>
+            <h:column>#{r.loppukurssi}</h:column>
+        </h:dataTable>
+    </h:body>
+</html>
+
