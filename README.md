@@ -15,3 +15,6 @@ Instructions for 09-try-with-resources Java project:
 
 This project reads McDonalds products categories, product names and prices from zip-file mcdonaldsprices.zip. The project creates two tables ("TUOTERYHMÄT" ja "TUOTTEET" to database "DEMO". Make sure you are connected to jdbc:derby://localhost:1527/po-demo.
 
+Instructions for 11-mcdonalds-jpa-otmud Java project: 
+
+This project reads McDonalds product categories, product names and prices from zip-file mcdonaldsprices.zip. The project creates three tables ("TUOTERYHMÄ", "TUOTE" and "TUOTERYHMÄ_TUOTE" to database "DEMO". Make sure you are connected to jdbc:derby://localhost:1527/11-jpa.
