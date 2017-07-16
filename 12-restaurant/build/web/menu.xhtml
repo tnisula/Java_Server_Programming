@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+        <title>Menu</title>
+    </h:head>
+    <h:body>
+        <h1>Menu</h1>
+        
+        <h2>Meals</h2>
+        <h:dataTable var="meal" value="#{menuBean.meals}">
+            <h:column>
+                ${meal.name}
+            </h:column>
+            <h:column>(<ui:repeat var="dish" value="#{meal.items}" 
+                           varStatus="varstat">${dish.name}<h:outputText value="," 
+                                  rendered="#{!varstat.last}"/>
+                </ui:repeat>)
+            </h:column>
+        </h:dataTable>
+        
+        <h2>Dishes</h2>
+        <h:dataTable var="dish" value="#{menuBean.dishes}">
+            <h:column>
+                ${dish.name}
+            </h:column>
+            <h:column>(<ui:repeat var="ingredient" value="#{dish.madeWith}" 
+                           varStatus="varstat">${ingredient.name}<h:outputText value="," 
+                                  rendered="#{!varstat.last}"/>
+                </ui:repeat>)
+            </h:column>
+        </h:dataTable>
+        
+        <h2>Ingredients</h2>
+        <h:dataTable var="ingr" value="#{menuBean.ingredients}">
+            <h:column>
+                ${ingr.name} ${ingr.vendor.companyname}
+            </h:column>
+        </h:dataTable>
+        
+        <h2>Vendors</h2>
+        <ui:repeat var="vnd" value="#{menuBean.vendors}">
+            <h3>${vnd.companyname}</h3>
+            <ul>
+                <ui:repeat var="ing" value="#{vnd.ingredients}">
+                    <li>${ing.name}</li>
+                </ui:repeat>
+            </ul>
+        </ui:repeat>
+        
+    </h:body>
+</html>
+
