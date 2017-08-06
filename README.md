@@ -34,8 +34,8 @@ This project reads McDonalds product categories, product names and prices from z
 
 Instructions for 12-restaurant Java project:
 
-This project reads the menu of a restaurant from the restaurant database. This is the first project to use MySQL connection.
+This project reads the menu of a restaurant from the restaurant database. This is the first project to use MySQL connection. In this project we learned, how to write a bean ("MenuBean") and generate named queries. Menu.xhtml file shows, what this project shows in the web page.
 
 Instructions for 13-classicmodels Java project:
 
-This project reads the customer names and phone numbers from the database "classicmodels". In this project we used CustomerPhoneBean and named query "Customers.findCustomerPhones". This project uses MySQL connection.
+This project reads the customer names and phone numbers from the database "classicmodels". In this project we used CustomerPhoneBean and named query "Customers.findCustomerPhones". Index.xhtml file shows, what this project shows in the web page. This project uses MySQL connection.
