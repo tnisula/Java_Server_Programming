@@ -39,3 +39,7 @@ This project reads the menu of a restaurant from the restaurant database. This i
 Instructions for 13-classicmodels Java project:
 
 This project reads the customer names and phone numbers from the database "classicmodels". In this project we used CustomerPhoneBean and named query "Customers.findCustomerPhones". Index.xhtml file shows, what this project shows in the web page. This project uses MySQL connection.
+
+Instructions for 14-range-finder Java project:
+
+This project reads the gold, silver and bronze olympic medalists from the database "ski50", when the user selects the start and end years from the comboboxes. In this project we used RangeBean to connect to the database "ski50". We wrote our own queries to initialize start and end year comboboxes. We wrote also the query to read the results". Index.xhtml file shows, what this project shows in the web page. This project uses MySQL connection.
